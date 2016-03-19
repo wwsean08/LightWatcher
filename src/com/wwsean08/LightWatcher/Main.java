@@ -1,12 +1,8 @@
 package com.wwsean08.LightWatcher;
 
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.WatchService;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-import static java.nio.file.StandardWatchEventKinds.*;
 
 public class Main
 {
@@ -19,14 +15,16 @@ public class Main
             System.exit(-1);
         }
 
-        File file = new File(args[0]);
-        if (!file.exists())
+        ExecutorService executor = Executors.newFixedThreadPool(args.length);
+        for(String arg : args)
         {
-            System.out.println("The file to watch needs to exist already");
-            System.exit(-1);
+            File file = new File(arg);
+            if (!file.exists())
+            {
+                System.out.println("The file to watch needs to exist already. Unable to find " + arg);
+            }
+            LightWatcherThread thread = new LightWatcherThread(file);
+            executor.submit(thread);
         }
-        LightWatcherThread thread = new LightWatcherThread(file);
-        ExecutorService executor = Executors.newSingleThreadExecutor();
-        executor.submit(thread);
     }
 }
