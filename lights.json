@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "file": "F:\\DeepBot - Twitch Streamer Assistant\\custom logs\\light.txt",
+      "verifyContentChanged": false,
+      "controls": [
+        {
+          "keyword": "red",
+          "command": "C:\\Users\\wwsea_000\\Desktop\\light_controls\\RedOn.bat",
+          "storeColor": true,
+          "revertColor": false
+        },
+        {
+          "keyword": "blue",
+          "command": "C:\\Users\\wwsea_000\\Desktop\\light_controls\\BlueOn.bat",
+          "storeColor": true,
+          "revertColor": false
+        },
+        {
+          "keyword": "green",
+          "command": "C:\\Users\\wwsea_000\\Desktop\\light_controls\\GreenOn.bat",
+          "storeColor": true,
+          "revertColor": false
+        },
+        {
+          "keyword": "off",
+          "command": "C:\\Users\\wwsea_000\\Desktop\\light_controls\\AllOff.bat",
+          "storeColor": true,
+          "revertColor": false
+        },
+        {
+          "keyword": "police",
+          "command": "C:\\Users\\wwsea_000\\Desktop\\light_controls\\PoliceFlash.bat",
+          "storeColor": false,
+          "revertColor": true
+        },
+        {
+          "keyword": "follow",
+          "command": "C:\\Users\\wwsea_000\\Desktop\\light_controls\\BlueFlash.bat",
+          "storeColor": false,
+          "revertColor": true
+        }
+      ]
+    }
+  ]
+}
