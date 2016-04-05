@@ -22,9 +22,9 @@ public class LightWatcherThread implements Runnable
     private final File file;
     private final Properties props;
     private final FileHolder fileHolder;
+    private final String PROPFILE;
 
     private final String COLOR = "color";
-    private final String PROPFILE = "C:\\Users\\wwsea_000\\Desktop\\light_controls\\status.properties";
 
     private String prevFileData = "DEADBEEF";
 
@@ -32,6 +32,7 @@ public class LightWatcherThread implements Runnable
     {
         this.fileHolder = fileHolder;
         this.file = new File(fileHolder.getFilePath());
+        this.PROPFILE = fileHolder.getPropertiesFile();
         System.out.println(file.getName());
         props = new Properties();
         try

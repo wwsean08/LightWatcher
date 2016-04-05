@@ -3,6 +3,7 @@
     {
       "file": "F:\\DeepBot - Twitch Streamer Assistant\\custom logs\\light.txt",
       "verifyContentChanged": false,
+      "propFile": "C:\\Users\\wwsea_000\\Desktop\\light_controls\\status.properties",
       "controls": [
         {
           "keyword": "red",
